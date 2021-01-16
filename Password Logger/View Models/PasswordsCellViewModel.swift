@@ -28,5 +28,4 @@ class PasswordCellViewModel: ObservableObject, Identifiable {
             .assign (to: \.id, on: self)
             .store(in: &cancellables)
     }
-    
 }

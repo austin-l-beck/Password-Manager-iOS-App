@@ -36,5 +36,4 @@ class PasswordListViewModel: ObservableObject {
     func addAccount(account: Accounts) {
         accountRepository.addAccount(account)
     }
-    
 }

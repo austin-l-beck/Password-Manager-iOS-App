@@ -88,5 +88,4 @@ class LocalAccountRepository: BaseAccountRepository, AccountRepository, Observab
                 """)
         }
     }
-    
 }

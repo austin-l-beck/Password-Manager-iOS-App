@@ -51,7 +51,7 @@ struct LoginView: View {
                 .padding()
             }
             .navigationBarTitle("Login", displayMode: .inline)
-        }.background(Color.gray)
+        }
     }
 }
 
