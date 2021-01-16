@@ -3,23 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79F25053E3C6975F0D0E9A03 /* Pods_Password_Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706FCF0A81D90419282B4461 /* Pods_Password_Logger.framework */; };
+		FA67806425B32CC9005DB253 /* AppDelegate+Resolving.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67806325B32CC2005DB253 /* AppDelegate+Resolving.swift */; };
+		FA8B3E1925B3243E00010B15 /* AccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B3E1825B3243E00010B15 /* AccountRepository.swift */; };
 		FAD1BC6F25B1FAE000BFA36D /* Password_LoggerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1BC6E25B1FAE000BFA36D /* Password_LoggerApp.swift */; };
 		FAD1BC7125B1FAE000BFA36D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1BC7025B1FAE000BFA36D /* LoginView.swift */; };
 		FAD1BC7325B1FAE100BFA36D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD1BC7225B1FAE100BFA36D /* Assets.xcassets */; };
 		FAD1BC7625B1FAE100BFA36D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD1BC7525B1FAE100BFA36D /* Preview Assets.xcassets */; };
+		FAD1BC8025B200EA00BFA36D /* AccountCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1BC7F25B200EA00BFA36D /* AccountCreationView.swift */; };
+		FAD1BC8325B2115E00BFA36D /* Accounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1BC8225B2115E00BFA36D /* Accounts.swift */; };
+		FAD1BC8625B2127C00BFA36D /* AccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1BC8525B2127C00BFA36D /* AccountsView.swift */; };
+		FAD1BC8925B21D4E00BFA36D /* PasswordListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1BC8825B21D4E00BFA36D /* PasswordListViewModel.swift */; };
+		FAD1BC8C25B21E5900BFA36D /* PasswordsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1BC8B25B21E5900BFA36D /* PasswordsCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10F5CCFEE3946486F8E09643 /* Pods-Password Logger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Password Logger.debug.xcconfig"; path = "Target Support Files/Pods-Password Logger/Pods-Password Logger.debug.xcconfig"; sourceTree = "<group>"; };
+		706FCF0A81D90419282B4461 /* Pods_Password_Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Password_Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8FB56B81141FDFBDA2F4A4A /* Pods-Password Logger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Password Logger.release.xcconfig"; path = "Target Support Files/Pods-Password Logger/Pods-Password Logger.release.xcconfig"; sourceTree = "<group>"; };
+		FA67806325B32CC2005DB253 /* AppDelegate+Resolving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Resolving.swift"; sourceTree = "<group>"; };
+		FA8B3E1825B3243E00010B15 /* AccountRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRepository.swift; sourceTree = "<group>"; };
 		FAD1BC6B25B1FAE000BFA36D /* Password Logger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Password Logger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD1BC6E25B1FAE000BFA36D /* Password_LoggerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password_LoggerApp.swift; sourceTree = "<group>"; };
 		FAD1BC7025B1FAE000BFA36D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FAD1BC7225B1FAE100BFA36D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAD1BC7525B1FAE100BFA36D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FAD1BC7725B1FAE100BFA36D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD1BC7F25B200EA00BFA36D /* AccountCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCreationView.swift; sourceTree = "<group>"; };
+		FAD1BC8225B2115E00BFA36D /* Accounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accounts.swift; sourceTree = "<group>"; };
+		FAD1BC8525B2127C00BFA36D /* AccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsView.swift; sourceTree = "<group>"; };
+		FAD1BC8825B21D4E00BFA36D /* PasswordListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordListViewModel.swift; sourceTree = "<group>"; };
+		FAD1BC8B25B21E5900BFA36D /* PasswordsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordsCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79F25053E3C6975F0D0E9A03 /* Pods_Password_Logger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44E6BAB5BB425242D0E73374 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				706FCF0A81D90419282B4461 /* Pods_Password_Logger.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D0E17ADD6471C70D599B530 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				10F5CCFEE3946486F8E09643 /* Pods-Password Logger.debug.xcconfig */,
+				D8FB56B81141FDFBDA2F4A4A /* Pods-Password Logger.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FAD1BC6225B1FAE000BFA36D = {
 			isa = PBXGroup;
 			children = (
 				FAD1BC6D25B1FAE000BFA36D /* Password Logger */,
 				FAD1BC6C25B1FAE000BFA36D /* Products */,
+				6D0E17ADD6471C70D599B530 /* Pods */,
+				44E6BAB5BB425242D0E73374 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,9 +91,12 @@
 			isa = PBXGroup;
 			children = (
 				FAD1BC6E25B1FAE000BFA36D /* Password_LoggerApp.swift */,
-				FAD1BC7025B1FAE000BFA36D /* LoginView.swift */,
+				FAD1BC9025B2260800BFA36D /* Views */,
+				FAD1BC8F25B225F100BFA36D /* Model */,
+				FAD1BC8E25B225D400BFA36D /* View Models */,
 				FAD1BC7225B1FAE100BFA36D /* Assets.xcassets */,
 				FAD1BC7725B1FAE100BFA36D /* Info.plist */,
+				FA67806325B32CC2005DB253 /* AppDelegate+Resolving.swift */,
 				FAD1BC7425B1FAE100BFA36D /* Preview Content */,
 			);
 			path = "Password Logger";
@@ -69,6 +110,34 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		FAD1BC8E25B225D400BFA36D /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAD1BC8B25B21E5900BFA36D /* PasswordsCellViewModel.swift */,
+				FA8B3E1825B3243E00010B15 /* AccountRepository.swift */,
+				FAD1BC8825B21D4E00BFA36D /* PasswordListViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		FAD1BC8F25B225F100BFA36D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAD1BC8225B2115E00BFA36D /* Accounts.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAD1BC9025B2260800BFA36D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAD1BC8525B2127C00BFA36D /* AccountsView.swift */,
+				FAD1BC7F25B200EA00BFA36D /* AccountCreationView.swift */,
+				FAD1BC7025B1FAE000BFA36D /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,9 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAD1BC7A25B1FAE100BFA36D /* Build configuration list for PBXNativeTarget "Password Logger" */;
 			buildPhases = (
+				29C40EA6926565F8A57A69F2 /* [CP] Check Pods Manifest.lock */,
 				FAD1BC6725B1FAE000BFA36D /* Sources */,
 				FAD1BC6825B1FAE000BFA36D /* Frameworks */,
 				FAD1BC6925B1FAE000BFA36D /* Resources */,
+				2F79A9F5DD8DF3AF532F0663 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,13 +204,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		29C40EA6926565F8A57A69F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Password Logger-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F79A9F5DD8DF3AF532F0663 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Password Logger/Pods-Password Logger-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Password Logger/Pods-Password Logger-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Password Logger/Pods-Password Logger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FAD1BC6725B1FAE000BFA36D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA8B3E1925B3243E00010B15 /* AccountRepository.swift in Sources */,
+				FAD1BC8625B2127C00BFA36D /* AccountsView.swift in Sources */,
 				FAD1BC7125B1FAE000BFA36D /* LoginView.swift in Sources */,
+				FAD1BC8025B200EA00BFA36D /* AccountCreationView.swift in Sources */,
+				FAD1BC8C25B21E5900BFA36D /* PasswordsCellViewModel.swift in Sources */,
+				FA67806425B32CC9005DB253 /* AppDelegate+Resolving.swift in Sources */,
+				FAD1BC8325B2115E00BFA36D /* Accounts.swift in Sources */,
 				FAD1BC6F25B1FAE000BFA36D /* Password_LoggerApp.swift in Sources */,
+				FAD1BC8925B21D4E00BFA36D /* PasswordListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,11 +384,13 @@
 		};
 		FAD1BC7B25B1FAE100BFA36D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10F5CCFEE3946486F8E09643 /* Pods-Password Logger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Password Logger/Preview Content\"";
+				DEVELOPMENT_TEAM = F92B6572Y5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Password Logger/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -285,11 +407,13 @@
 		};
 		FAD1BC7C25B1FAE100BFA36D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8FB56B81141FDFBDA2F4A4A /* Pods-Password Logger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Password Logger/Preview Content\"";
+				DEVELOPMENT_TEAM = F92B6572Y5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Password Logger/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
