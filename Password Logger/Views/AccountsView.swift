@@ -57,6 +57,7 @@ struct AccountCell: View {
     @ObservedObject var passwordsCellVM: PasswordCellViewModel
     var onCommit: (Result<Accounts, InputError>) -> Void = {_ in}
     
+    
     var body: some View {
         VStack {
             HStack {
@@ -94,3 +95,4 @@ struct AccountCell: View {
 enum InputError: Error {
     case empty
 }
+

@@ -17,6 +17,7 @@ struct LoginView: View {
     @State var tempPassword: String
     @State private var passwordAccepted = false
     @State private var showError = false
+    @State var accountTaps = 0
     var ref: AnyObject?
     
     var body: some View {
@@ -64,8 +65,14 @@ struct LoginView: View {
                     AccountsView()
                 }
                 .padding()
-                NavigationLink(destination: AccountCreationView()) {
+                Button(action: {
+                    isAccountCreation.toggle()
+                    self.accountTaps += 1
+                    UserDefaults.standard.set(self.accountTaps, forKey: "accountTaps")
+                }) {
                     Text("Create Account")
+                }.sheet(isPresented: $isAccountCreation) {
+                    AccountCreationView()
                 }
             }
             .navigationBarTitle("Login", displayMode: .inline)

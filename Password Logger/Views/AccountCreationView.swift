@@ -15,8 +15,7 @@ struct AccountCreationView: View {
     @State var password = ""
     @State private var password2 = ""
     @State var passwordsMatch = true
-   
-   
+    let tapCount = UserDefaults.standard.integer(forKey: "accountTaps")
     
     var body: some View {
         VStack {
@@ -36,10 +35,8 @@ struct AccountCreationView: View {
                 .frame(width:200)
                 .border(Color.black)
             Button(action: {
-                UserDefaults.standard.set(self.email, forKey: "Email")
-                UserDefaults.standard.set(self.password, forKey: "Password")
-                print(UserDefaults.standard.string(forKey: "Email")!)
-                if password == password2 {
+                if password == password2 && tapCount == 0{
+                    // creating new account information to store in keychain
                     let keychainItem = [
                         kSecValueData: password.data(using: .utf8)!,
                         kSecAttrAccount: email,
@@ -47,12 +44,33 @@ struct AccountCreationView: View {
                         kSecClass: kSecClassInternetPassword,
                         kSecReturnData: true
                     ] as CFDictionary
+                        
                     let status = SecItemAdd(keychainItem, nil)
+                    
+                    self.presentation.wrappedValue.dismiss()
+                } else if password == password2 && tapCount != 0 {
+                    let query = [
+                        kSecClass: kSecClassInternetPassword,
+                        kSecAttrServer: "testing.com"
+                    ] as CFDictionary
+                    // removing previous entry for new account
+                    SecItemDelete(query)
+                    //creating new account to store in keychain
+                    let keychainItem = [
+                        kSecValueData: password.data(using: .utf8)!,
+                        kSecAttrAccount: email,
+                        kSecAttrServer: "testing.com",
+                        kSecClass: kSecClassInternetPassword,
+                        kSecReturnData: true
+                    ] as CFDictionary
+                        
+                    let status = SecItemAdd(keychainItem, nil)
+                    
                     self.presentation.wrappedValue.dismiss()
                 } else {
                     self.passwordsMatch = false
                 }
-            }) {
+                }) {
                 Text("Create Account")
             }
             .frame(width:200)
