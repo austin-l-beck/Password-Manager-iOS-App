@@ -26,14 +26,27 @@ struct AccountCreationView: View {
             TextField("Email...", text: self.$email)
                 .frame(width: 200)
                 .border(Color.black)
+                .background(Color.white)
+                .foregroundColor(.black)
+                .padding()
             Text("Enter Password")
             SecureField("...", text: self.$password)
                 .frame(width:200)
                 .border(Color.black)
+                .background(Color.white)
+                .foregroundColor(.black)
+                .padding()
             Text("Confirm Password")
             SecureField("...", text: self.$password2)
                 .frame(width:200)
                 .border(Color.black)
+                .background(Color.white)
+                .foregroundColor(.black)
+                .padding()
+            if !passwordsMatch {
+                Text("Passwords do no match.")
+                    .foregroundColor(.red)
+            }
             Button(action: {
                 if password == password2 && tapCount == 0{
                     // creating new account information to store in keychain
