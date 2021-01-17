@@ -3,7 +3,5 @@ README
 This is a Password Manager iOS Application build for a coding interview.
 This application utilizes DISK and Resolver to store the data into a local repository
 I was unable to integrate Firebase as it requires a paid Apple Developer Program membership
-The app requires a login to access which is hard coded for now.
-
-Email: Testing@outlook.com
-Password: 123456
+You are able to create an account whose information will be stored securely using the build in Keychain API. 
+The login password is then encrypted to ensure that it is secured
