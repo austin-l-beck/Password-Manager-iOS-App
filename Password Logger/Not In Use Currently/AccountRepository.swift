@@ -4,6 +4,7 @@
 //  Repository creation for storing the password information 
 //  Created by Austin Beck on 1/16/21.
 //
+// Not being used in current iteration as I am storing data in Keychain instead
 
 import Foundation
 import Resolver

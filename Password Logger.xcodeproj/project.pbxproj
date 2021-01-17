@@ -11,6 +11,8 @@
 		FA67806425B32CC9005DB253 /* AppDelegate+Resolving.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67806325B32CC2005DB253 /* AppDelegate+Resolving.swift */; };
 		FA8B3E1925B3243E00010B15 /* AccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B3E1825B3243E00010B15 /* AccountRepository.swift */; };
 		FA8D2F8F25B4A024003C934C /* AddingAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D2F8E25B4A024003C934C /* AddingAccounts.swift */; };
+		FA8D2F9625B4DFA1003C934C /* AccountCreationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D2F9525B4DFA1003C934C /* AccountCreationViewModel.swift */; };
+		FA8D2F9925B4E161003C934C /* AccountSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8D2F9825B4E161003C934C /* AccountSearchView.swift */; };
 		FAD1BC6F25B1FAE000BFA36D /* Password_LoggerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1BC6E25B1FAE000BFA36D /* Password_LoggerApp.swift */; };
 		FAD1BC7125B1FAE000BFA36D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1BC7025B1FAE000BFA36D /* LoginView.swift */; };
 		FAD1BC7325B1FAE100BFA36D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD1BC7225B1FAE100BFA36D /* Assets.xcassets */; };
@@ -30,6 +32,8 @@
 		FA8B3E1825B3243E00010B15 /* AccountRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRepository.swift; sourceTree = "<group>"; };
 		FA8B3E7925B492B500010B15 /* Password Logger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Password Logger.entitlements"; sourceTree = "<group>"; };
 		FA8D2F8E25B4A024003C934C /* AddingAccounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingAccounts.swift; sourceTree = "<group>"; };
+		FA8D2F9525B4DFA1003C934C /* AccountCreationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCreationViewModel.swift; sourceTree = "<group>"; };
+		FA8D2F9825B4E161003C934C /* AccountSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSearchView.swift; sourceTree = "<group>"; };
 		FAD1BC6B25B1FAE000BFA36D /* Password Logger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Password Logger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD1BC6E25B1FAE000BFA36D /* Password_LoggerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password_LoggerApp.swift; sourceTree = "<group>"; };
 		FAD1BC7025B1FAE000BFA36D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -72,6 +76,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FA8D2FA025B4E843003C934C /* Not In Use Currently */ = {
+			isa = PBXGroup;
+			children = (
+				FAD1BC8525B2127C00BFA36D /* AccountsView.swift */,
+				FAD1BC8B25B21E5900BFA36D /* PasswordsCellViewModel.swift */,
+				FAD1BC8825B21D4E00BFA36D /* PasswordListViewModel.swift */,
+				FA8B3E1825B3243E00010B15 /* AccountRepository.swift */,
+			);
+			path = "Not In Use Currently";
+			sourceTree = "<group>";
+		};
 		FAD1BC6225B1FAE000BFA36D = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +108,7 @@
 		FAD1BC6D25B1FAE000BFA36D /* Password Logger */ = {
 			isa = PBXGroup;
 			children = (
+				FA8D2FA025B4E843003C934C /* Not In Use Currently */,
 				FA8B3E7925B492B500010B15 /* Password Logger.entitlements */,
 				FAD1BC6E25B1FAE000BFA36D /* Password_LoggerApp.swift */,
 				FAD1BC9025B2260800BFA36D /* Views */,
@@ -117,10 +133,7 @@
 		FAD1BC8E25B225D400BFA36D /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				FAD1BC8B25B21E5900BFA36D /* PasswordsCellViewModel.swift */,
-				FA8B3E1825B3243E00010B15 /* AccountRepository.swift */,
-				FA8D2F8E25B4A024003C934C /* AddingAccounts.swift */,
-				FAD1BC8825B21D4E00BFA36D /* PasswordListViewModel.swift */,
+				FA8D2F9525B4DFA1003C934C /* AccountCreationViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -136,8 +149,9 @@
 		FAD1BC9025B2260800BFA36D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FAD1BC8525B2127C00BFA36D /* AccountsView.swift */,
 				FAD1BC7F25B200EA00BFA36D /* AccountCreationView.swift */,
+				FA8D2F8E25B4A024003C934C /* AddingAccounts.swift */,
+				FA8D2F9825B4E161003C934C /* AccountSearchView.swift */,
 				FAD1BC7025B1FAE000BFA36D /* LoginView.swift */,
 			);
 			path = Views;
@@ -256,12 +270,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA8D2F9925B4E161003C934C /* AccountSearchView.swift in Sources */,
 				FA8B3E1925B3243E00010B15 /* AccountRepository.swift in Sources */,
 				FAD1BC8625B2127C00BFA36D /* AccountsView.swift in Sources */,
 				FAD1BC7125B1FAE000BFA36D /* LoginView.swift in Sources */,
 				FAD1BC8025B200EA00BFA36D /* AccountCreationView.swift in Sources */,
 				FAD1BC8C25B21E5900BFA36D /* PasswordsCellViewModel.swift in Sources */,
 				FA67806425B32CC9005DB253 /* AppDelegate+Resolving.swift in Sources */,
+				FA8D2F9625B4DFA1003C934C /* AccountCreationViewModel.swift in Sources */,
 				FA8D2F8F25B4A024003C934C /* AddingAccounts.swift in Sources */,
 				FAD1BC8325B2115E00BFA36D /* Accounts.swift in Sources */,
 				FAD1BC6F25B1FAE000BFA36D /* Password_LoggerApp.swift in Sources */,

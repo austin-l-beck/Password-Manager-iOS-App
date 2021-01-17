@@ -74,7 +74,7 @@ struct LoginView: View {
                 }.padding()
                 
                 if passwordAccepted {
-                    NavigationLink(destination: AccountsView()) {
+                    NavigationLink(destination: AccountSearchView()) {
                         Text("View Accounts")
                     } .padding()
                 }

@@ -4,6 +4,7 @@
 //
 //  Created by Austin Beck on 1/15/21.
 //
+// This view is not being used currently as I do not have a secure encrypted DB to host the data into 
 
 import SwiftUI
 
