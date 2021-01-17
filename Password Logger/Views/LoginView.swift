@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Security
 
 struct LoginView: View {
     @State var isAccountCreation = false
@@ -16,6 +17,7 @@ struct LoginView: View {
     @State var tempPassword: String
     @State private var passwordAccepted = false
     @State private var showError = false
+    var ref: AnyObject?
     
     var body: some View {
         NavigationView {
@@ -36,19 +38,35 @@ struct LoginView: View {
                         .foregroundColor(.red)
                 }
                 Button(action: {
-                    // check to see if email and password entered match before logging in
-                    if email == tempEmail && password == tempPassword {
-                        self.passwordAccepted.toggle()
-                    } else {
-                        // if information doesn't match, throws error message
-                        self.showError.toggle()
+                    let query = [
+                        kSecClass: kSecClassInternetPassword,
+                        kSecAttrServer: "testing.com",
+                        kSecReturnAttributes: true,
+                        kSecReturnData: true
+                    ] as CFDictionary
+                    var result: AnyObject?
+                    let status = SecItemCopyMatching(query, &result)
+                    let dic = result as! NSDictionary
+                    let passwordData = dic[kSecValueData] as! Data
+                    let storedPassword = String(data: passwordData, encoding: .utf8)!
+                    let username = dic[kSecAttrAccount] ?? ""
+                        // check to see if email and password entered match before logging in
+                    if tempEmail == username as! String && tempPassword == storedPassword {
+                            self.passwordAccepted.toggle()
+                        } else {
+                            // if information doesn't match, throws error message
+                            self.showError.toggle()
                     }
+                    
                 }) {
                     Text("Login")
                 }.sheet(isPresented: $passwordAccepted) {
                     AccountsView()
                 }
                 .padding()
+                NavigationLink(destination: AccountCreationView()) {
+                    Text("Create Account")
+                }
             }
             .navigationBarTitle("Login", displayMode: .inline)
         }

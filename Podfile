@@ -8,5 +8,6 @@ target 'Password Logger' do
   # Pods for Password Logger
   pod 'Resolver'
   pod 'Disk'
+  pod 'KeychainSwift'
 
 end
