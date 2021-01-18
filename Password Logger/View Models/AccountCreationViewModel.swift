@@ -53,7 +53,7 @@ class AccountCreationViewModel: ObservableObject {
         return (account, username, password)
         } else {
             print("Error")
-            return ("","","")
+            return ("Not Found","Not Found","Not Found")
         }
     }
 }
