@@ -11,6 +11,7 @@ import Security
 
 struct AccountCreationView: View {
     @Environment(\.presentationMode) var presentation
+    @ObservedObject var accountCreationVM = AccountCreationViewModel()
     @State var email = ""
     @State var password = ""
     @State private var password2 = ""
@@ -50,15 +51,7 @@ struct AccountCreationView: View {
             Button(action: {
                 if password == password2 && tapCount == 0{
                     // creating new account information to store in keychain
-                    let keychainItem = [
-                        kSecValueData: password.data(using: .utf8)!,
-                        kSecAttrAccount: email,
-                        kSecAttrServer: "testing.com",
-                        kSecClass: kSecClassInternetPassword,
-                        kSecReturnData: true
-                    ] as CFDictionary
-                        
-                    let status = SecItemAdd(keychainItem, nil)
+                    accountCreationVM.createAccount(email: email, password: password)
                     
                     self.presentation.wrappedValue.dismiss()
                 } else if password == password2 && tapCount != 0 {
@@ -69,15 +62,7 @@ struct AccountCreationView: View {
                     // removing previous entry for new account
                     SecItemDelete(query)
                     //creating new account to store in keychain
-                    let keychainItem = [
-                        kSecValueData: password.data(using: .utf8)!,
-                        kSecAttrAccount: email,
-                        kSecAttrServer: "testing.com",
-                        kSecClass: kSecClassInternetPassword,
-                        kSecReturnData: true
-                    ] as CFDictionary
-                        
-                    let status = SecItemAdd(keychainItem, nil)
+                    accountCreationVM.createAccount(email: email, password: password)
                     
                     self.presentation.wrappedValue.dismiss()
                 } else {

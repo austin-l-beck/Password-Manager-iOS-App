@@ -9,6 +9,7 @@ import SwiftUI
 import Security
 
 struct LoginView: View {
+    @ObservedObject var accountCreationVM = AccountCreationViewModel()
     @State var isAccountCreation = false
     @State var tempEmail: String
     @State var tempPassword: String
@@ -40,20 +41,8 @@ struct LoginView: View {
                         .foregroundColor(.red)
                 }
                 Button(action: {
-                    let query = [
-                        kSecClass: kSecClassInternetPassword,
-                        kSecAttrServer: "testing.com",
-                        kSecReturnAttributes: true,
-                        kSecReturnData: true
-                    ] as CFDictionary
-                    var result: AnyObject?
-                    let status = SecItemCopyMatching(query, &result)
-                    let dic = result as! NSDictionary
-                    let passwordData = dic[kSecValueData] as! Data
-                    let storedPassword = String(data: passwordData, encoding: .utf8)!
-                    let username = dic[kSecAttrAccount] ?? ""
-                        // check to see if email and password entered match before logging in
-                    if tempEmail == username as! String && tempPassword == storedPassword {
+                    let (username, storedPassword) = accountCreationVM.getLoginCredentials()                        // check to see if email and password entered match before logging in
+                    if tempEmail == username && tempPassword == storedPassword {
                             self.passwordAccepted.toggle()
                         } else {
                             // if information doesn't match, throws error message

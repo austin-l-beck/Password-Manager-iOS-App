@@ -19,6 +19,7 @@ class AccountCreationViewModel: ObservableObject {
         ] as CFDictionary
             
         let status = SecItemAdd(keychainItem, nil)
+        print("Operation finished with status: \(status)")
     }
     
     func deleteItem(accountName: String) {
@@ -28,6 +29,36 @@ class AccountCreationViewModel: ObservableObject {
         ] as CFDictionary
         // removing previous entry for new account
         SecItemDelete(query)
+    }
+    
+    func createAccount(email: String, password: String) {
+        let keychainItem = [
+            kSecValueData: password.data(using: .utf8)!,
+            kSecAttrAccount: email,
+            kSecAttrServer: "testing.com",
+            kSecClass: kSecClassInternetPassword,
+            kSecReturnData: true
+        ] as CFDictionary
+            
+        let status = SecItemAdd(keychainItem, nil)
+        print("Operation finished with status: \(status)")
+    }
+    
+    func getLoginCredentials() -> (String, String) {
+        let query = [
+            kSecClass: kSecClassInternetPassword,
+            kSecAttrServer: "testing.com",
+            kSecReturnAttributes: true,
+            kSecReturnData: true
+        ] as CFDictionary
+        var result: AnyObject?
+        let status = SecItemCopyMatching(query, &result)
+        print("Operation finished with status: \(status)")
+        let dic = result as! NSDictionary
+        let passwordData = dic[kSecValueData] as! Data
+        let storedPassword = String(data: passwordData, encoding: .utf8)!
+        let username = dic[kSecAttrAccount] as! String
+        return (username, storedPassword)
     }
     
     func searchItem(accountName: String) -> (String, String, String){
