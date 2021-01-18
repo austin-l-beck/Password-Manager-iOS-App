@@ -30,7 +30,7 @@ class AccountCreationViewModel: ObservableObject {
         SecItemDelete(query)
     }
     
-    func searchItem(accountName: String) {
+    func searchItem(accountName: String) -> (String, String, String){
         let query = [
           kSecClass: kSecClassInternetPassword,
           kSecAttrServer: "\(accountName)",
@@ -44,8 +44,11 @@ class AccountCreationViewModel: ObservableObject {
         print("Operation finished with status: \(status)")
         let dic = result as! NSDictionary
 
-        let username = dic[kSecAttrAccount] ?? ""
+        let username = dic[kSecAttrAccount] as! String
         let passwordData = dic[kSecValueData] as! Data
         let password = String(data: passwordData, encoding: .utf8)!
+        let account = accountName
+        
+        return (account, username, password)
     }
 }
