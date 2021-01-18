@@ -42,6 +42,7 @@ class AccountCreationViewModel: ObservableObject {
         let status = SecItemCopyMatching(query, &result)
 
         print("Operation finished with status: \(status)")
+        if result != nil {
         let dic = result as! NSDictionary
 
         let username = dic[kSecAttrAccount] as! String
@@ -50,5 +51,9 @@ class AccountCreationViewModel: ObservableObject {
         let account = accountName
         
         return (account, username, password)
+        } else {
+            print("Error")
+            return ("","","")
+        }
     }
 }
