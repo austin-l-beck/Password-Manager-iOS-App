@@ -18,6 +18,10 @@ struct AddingAccountsView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Spacer()
+            HStack {
+                Text("Enter Account Name: ")
+                TextField("Account Name...", text: $tempAccountName)
+            }.padding()
             HStack{
                 Text("Enter Username: ")
                 TextField("Username...", text: $tempUsername)
@@ -25,10 +29,6 @@ struct AddingAccountsView: View {
             HStack {
                 Text("Enter Password: ")
                 TextField("Password...", text: $tempPassword)
-            }.padding()
-            HStack {
-                Text("Enter Account Name: ")
-                TextField("Account Name...", text: $tempAccountName)
             }.padding()
             Spacer()
             HStack {
